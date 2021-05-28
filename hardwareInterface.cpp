@@ -1,6 +1,6 @@
 /******************************************************************************
 *                                                                             *
-*   Program : FileLogger                                                      *
+*   Program : TORQ beta                                                       *
 *                                                                             *
 *   FILE : hardwareInterface.h                                                *
 *                                                                             *
