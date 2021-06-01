@@ -1,6 +1,6 @@
 /******************************************************************************
 *                                                                             *
-*   Program : TORQ beta                                                       *
+*   Program : FileLogger                                                      *
 *                                                                             *
 *   FILE : mainMotor.cpp                                                      *
 *                                                                             *
@@ -43,7 +43,7 @@ void MainMotor::rotate_anti_clockwise()
 {
 	digitalWrite(input_a, HIGH);
 	digitalWrite(input_b, LOW);
-	analogWrite(enable_pin, rpm);
+	analogWrite(enable_pin, 500);
 }
 
 void MainMotor::rotate_stop()

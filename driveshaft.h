@@ -1,6 +1,6 @@
 /******************************************************************************
 *                                                                             *
-*   Program : TORQ beta                                                       *
+*   Program : FileLogger                                                      *
 *                                                                             *
 *   FILE : driveshaf.h                                                        *
 *                                                                             *
@@ -16,7 +16,6 @@
 #include "servoMotor.h"
 #include <Arduino.h>
 
-
 class DriveShaft
 {
 public:
@@ -25,9 +24,9 @@ public:
     MainMotor p_mainMotor;          // (byte m_enable_pin, byte m_input_a, byte m_input_b)
     ServoMotor p_servoMotor;        // (byte pin)
 
-    void moveForward();
-    void turnLeft();
-    void turnRight();
+    void moveForward(int m_speed);
+    void turnLeft(int m_speed, int m_angle);
+    void turnRight(int m_speed, int m_angle);
     void powerStart();
     void stopMovement();
 };

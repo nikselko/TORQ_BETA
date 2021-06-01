@@ -1,6 +1,6 @@
 /******************************************************************************
 *                                                                             *
-*   Program : TORQ beta                                                       *
+*   Program : FileLogger                                                      *
 *                                                                             *
 *   FILE : servoMotor.cpp                                                     *
 *                                                                             *
@@ -15,7 +15,7 @@
 ServoMotor::ServoMotor(byte m_pin)
 {
     pin = m_pin;
-    pos = 90;
+    pos = 92;
 }
 
 void ServoMotor::init()

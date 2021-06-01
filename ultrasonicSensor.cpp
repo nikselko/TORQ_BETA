@@ -1,6 +1,6 @@
 /******************************************************************************
 *                                                                             *
-*   Program : TORQ beta                                                       *
+*   Program : FileLogger                                                      *
 *                                                                             *
 *   FILE : ultrasonicSensor.cpp                                               *
 *                                                                             *
