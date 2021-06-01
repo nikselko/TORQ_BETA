@@ -1,6 +1,6 @@
 /******************************************************************************
 *                                                                             *
-*   Program : TORQ beta                                                       *
+*   Program : FileLogger                                                      *
 *                                                                             *
 *   FILE : driveshaft.cpp                                                     *
 *                                                                             *
@@ -16,27 +16,35 @@ DriveShaft::DriveShaft(byte m_epin, byte m_inapin, byte m_inbpin, byte m_s_pin) 
 {
 }
 
-void DriveShaft::moveForward()
+void DriveShaft::moveForward(int m_speed)
 {
   p_servoMotor.reset();
-	p_mainMotor.set_rpm(180);
+	p_mainMotor.set_rpm(m_speed);
 	p_mainMotor.rotate_clockwise();
 }
 
-void DriveShaft::turnLeft()
+void DriveShaft::turnLeft(int m_speed, int m_angle)
 {
   p_servoMotor.reset();
-  p_servoMotor.rotate_left(18);
-	p_mainMotor.set_rpm(145);
+  p_servoMotor.rotate_left(m_angle);
+	p_mainMotor.set_rpm(m_speed);
 	p_mainMotor.rotate_clockwise();
 }
 
-void DriveShaft::turnRight()
+void DriveShaft::turnRight(int m_speed, int m_angle)
 {
   p_servoMotor.reset();
-  p_servoMotor.rotate_right(18);
-	p_mainMotor.set_rpm(145);
+  p_servoMotor.rotate_right(m_angle);
+	p_mainMotor.set_rpm(m_speed);
 	p_mainMotor.rotate_clockwise();
+}
+
+void DriveShaft::powerStart()
+{
+  p_servoMotor.reset();
+  p_mainMotor.set_rpm(500);
+  p_mainMotor.rotate_clockwise();
+  delay(200);
 }
 
 void DriveShaft::stopMovement()
